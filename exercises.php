@@ -79,7 +79,6 @@ $(document).ready(function(){
 </script>
 </head>
 <body>
-<p> $picture $answer $entry $check1 $grade</p>
 <a class="cylink" href="main.php">Home</a><br/>
 <br/>
 <div class="exercisetext">$problems exercises left.</div>
