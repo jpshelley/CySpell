@@ -55,9 +55,9 @@ $grade = $_GET['grade'];
 		<br/>
 		<br/>
 
-		<span class="exercisetext">Level: $grade</span>
+		<span class="exercisetext">Level: <?php echo $grade?></span>
 
-		<form action="exercises.php" method="post">
+		<form action="exercises?grade=<?php echo $grade?>" method="post">
 			<input type="hidden" name="grade" value=$grade>
 			<div id="dropdowncont">
 				<select id="probsdropdown" name="problems">
