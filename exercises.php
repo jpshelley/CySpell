@@ -17,6 +17,7 @@ catch(PDOException $e){
 $results = $db->query("SELECT * FROM problems");
 
 $arr = array();
+$pass_arr = array();
 $i = 0;
 $entry;
 $check1;
@@ -31,11 +32,13 @@ foreach($results as $row){
 }
 
 // Get a new picture and answer
+$j = 0;
 $entry = sizeof($arr);
 $id = rand(0, count($arr));
 $picture =  $arr[$id]['picture'];
 $answer =  $arr[$id]['answer'];
-
+$pass_arr[i]['picture'] = $picture;
+j++;
 echo <<<EOHTML
 <html>
 <head>
@@ -96,6 +99,8 @@ $(document).ready(function(){
 EOHTML;
 }
 else {
+$serialized =htmlspecialchars(serialize($pass_arr));
+echo "<input type=\"hidden\" name=\"ArrayData\" value=\"$serialized\"/>";
 echo <<<EOHTML
 <html>
 <head>
@@ -119,7 +124,7 @@ $(document).ready(function() {
 <body>
 
 <a class="cylink" href="main.php">Home</a><br/>
-
+<a class="cylink" href="FlashCards.php">Show Flashcards</a><br/>
 <p>
 <div class="exercisetext" >Thank you for playing! :)</div>
 </p>
@@ -130,4 +135,6 @@ $(document).ready(function() {
 EOHTML;
 
 }
+
+
 ?>
