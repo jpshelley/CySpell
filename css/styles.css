@@ -1,23 +1,9 @@
 body
 {
-	background-color: limegreen;
+	background-color: #FF0;
 	text-align: center;
 }
-.maintitle
-{
-	text-align: center;
-	margin-top: 50px;
-	font-size: 68pt;
-	font-family: helvetica;
-	color: yellow;
-}
-.subtitle
-{
-	font-size: 38px;
-	font-family: helvetica;
-	text-align: center;
-	color: white;
-}
+
 #gradelist
 {
 	margin: 0 auto;
@@ -37,12 +23,12 @@ body
 	font-weight: bold;
 	text-decoration: none;
 	padding: 12px;
-	background: limegreen;
-	color: white;
+	background: red;
+	color: red;
 	font-size: 47px;
 	font-family: helvetica;
 	border-radius: 4px;
-	border: 2px solid white;
+	border: 2px yellow;
 	width: 320;
 	text-align: center;
 }
@@ -54,13 +40,13 @@ body
 {
 	border: 2px solid yellow;
 	border-radius: 4px;
-	background-color: limegreen;
+	background-color: red;
 	line-height: 80px;
 	width: 450px;
 	text-align: center;
 	font-family: helvetica;
 	font-size: 69px;
-	color: white;
+	color: red;
 	margin-bottom: 20px;
 	margin-top: 30px;
 }
@@ -68,7 +54,7 @@ body
 {
 	border: 2px solid yellow;
 	color: white;
-	background-color: limegreen;
+	background-color: red;
 	font-size: 40px;
 	font-family: helvetica;
 	padding: 30px;
@@ -77,20 +63,20 @@ body
 }
 .exercisetext
 {
-	color: white;
+	color: red;
 	font-size: 24px;
 	font-family: helvetica;
 }
 #image
 {
-	border-radius: 10px;
-	border: 2px solid yellow;
-	margin: 30px;
+	top: 0px;
+	margin-left: 50px;
+	position: absolute;
 }
 #probsdropdown
 {
 	font-size: 30px;
-	background-color: limegreen;
+	background-color: red;
 	color: white;
 	padding-left: 13px;
 	position: relative;
@@ -103,20 +89,21 @@ body
 	display: inline-block;
 	overflow: hidden;
 	position: relative;
-	height: 36px;
+	height: 56px;
 	margin-top: 50px;
-	width: 42px;
+	width: 102px;
 	margin-bottom: 50px;
 	padding-left: 0;
 	border: 2px solid yellow;
 	border-radius: 3px;
+	margin-left: 35px;
 }
 .cylink
 {
 font-size: 21px;
 font-family: helvetica;
 text-decoration: none;
-color: white;
+color: red;
 border: 2px solid white;
 border-radius: 3px;
 padding-left: 10px;

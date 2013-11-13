@@ -21,9 +21,9 @@ $facebook = new Facebook($config);
 		Learn more about options for the login button plugin:
 		/docs/reference/plugins/login/ -->
 
-		<h1 class="maintitle">CySpell</h1>
-		<p class="subtitle">
-			A learning game for kids.
+		<h1 class="maintitle"><img src="images/Cy-Spell-Logo.png"></h1>
+		<p class="login">
+			Log in here!
 		</p>
 		<a href="#" onclick="login();"><img src="images/PNG/facebook.png"/></a>
 		<!-- <fb:login-button show-faces="true" width="200" max-rows="1" onlogin="submitLoginForm();" size="xlarge"></fb:login-button> -->

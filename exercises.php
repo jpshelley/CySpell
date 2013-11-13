@@ -1,7 +1,7 @@
 <?php 
 $problems = $_POST["problems"] - 1;
 $grade = $_GET["grade"];
-//$grade = 1;
+
 if($problems >= 0) {
 
 // Access DB
@@ -36,7 +36,6 @@ $id = rand(0, count($arr));
 $picture =  $arr[$id]['picture'];
 $answer =  $arr[$id]['answer'];
 
-//$picture = "images/apple.png";
 echo <<<EOHTML
 <html>
 <head>
@@ -46,27 +45,27 @@ echo <<<EOHTML
 <script>
 $(document).ready(function(){
 	$('#submitword').bind('mouseenter',function(){
-		$(this).transition({backgroundColor: 'yellow',color: 'limegreen',border: '2px solid yellow', queue: false},150);
+		$(this).transition({backgroundColor: 'yellow',color: 'red',border: '2px solid yellow', queue: false},150);
 		$(this).bind('mouseout',function() {
-			$(this).transition({backgroundColor: '',color: 'white',border: '2px solid white', queue: false},150);
+			$(this).transition({backgroundColor: '',color: 'yellow',border: '2px solid white', queue: false},150);
 			$(this).unbind('mouseout');
 			return false;
 		});
 		return false;
 	});
 	$('#spellhere').bind('focus', function() {
-		$(this).transition({border: '2px dashed yellow', backgroundColor: 'green', queue: false},150);
+		$(this).transition({border: '2px dashed yellow', backgroundColor: 'red', queue: false},150);
 		$(this).bind('blur',function() {
-			$(this).transition({backgroundColor: 'limegreen',border: '2px solid yellow', queue: false},150);
+			$(this).transition({backgroundColor: 'red',border: '2px solid yellow', queue: false},150);
 			$(this).unbind('blur');
 			return false;
 		});
 		return false;
 	});
 	$('.cylink').bind('mouseenter',function(){
-		$(this).transition({backgroundColor: 'yellow',color: 'limegreen',border: '2px solid yellow', queue: false},150);
+		$(this).transition({backgroundColor: 'yellow',color: 'red' ,border: '2px solid yellow', queue: false},150);
 		$(this).bind('mouseout',function() {
-			$(this).transition({backgroundColor: '',color: 'white',border: '2px solid white', queue: false},150);
+			$(this).transition({backgroundColor: '',color: 'red',border: '2px solid white', queue: false},150);
 			$(this).unbind('mouseout');
 			return false;
 		});
@@ -106,9 +105,9 @@ echo <<<EOHTML
 <script>
 $(document).ready(function() {
 	$('.cylink').bind('mouseenter',function(){
-		$(this).transition({backgroundColor: 'yellow',color: 'limegreen',border: '2px solid yellow', queue: false},150);
+		$(this).transition({backgroundColor: 'yellow',color: 'red',border: '2px solid yellow', queue: false},150);
 		$(this).bind('mouseout',function() {
-			$(this).transition({backgroundColor: '',color: 'white',border: '2px solid white', queue: false},150);
+			$(this).transition({backgroundColor: '',color: 'red',border: '2px solid white', queue: false},150);
 			$(this).unbind('mouseout');
 			return false;
 		});

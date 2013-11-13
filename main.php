@@ -46,28 +46,25 @@ $facebook = new Facebook($config);
 		Learn more about options for the login button plugin:
 		/docs/reference/plugins/login/ -->
 
-		<h1 class="maintitle">CySpell</h1>
-		<p class="subtitle">
-			A learning game for kids.
-		</p>
+		<h1 class="maintitle"><img src="images/Cy-Spell-Logo.png"></h1>
 
 		<ul id="gradelist">
 			<li>
-				<a href="start.php?grade=k">Kindergarten</a>
+				<a href="start.php?grade=k"><img src="images/kindergarten.png"></a>
 			</li>
 			<li>
-				<a href="start.php?grade=1">First Grade</a>
+				<a href="start.php?grade=1"><img src="images/first.png"></a>
 			</li>
 			<li>
-				<a href="start.php?grade=2">Second Grade</a>
+				<a href="start.php?grade=2"><img src="images/second-grade.png"></a>
 			</li>
 			<li>
-				<a href="start.php?grade=3">Third Grade</a>
+				<a href="start.php?grade=3"><img src="images/third.png"></a>
 			</li>
 			<li>
-				<a href="start.php?grade=4">Fourth Grade</a>
+				<a href="start.php?grade=4"><img src="images/fourth.png"></a>
 			</li>
-			<a href="#" onclick="logout();"><img src="images/PNG/facebook.png"/></a>
+			<a href="#" onclick="logout();"><img src="images/facebook1.png"/></a>
 
 		</ul>
 

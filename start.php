@@ -11,7 +11,7 @@ $grade = $_GET['grade'];
 				$('#submitword').bind('mouseenter', function() {
 					$(this).transition({
 						backgroundColor : 'yellow',
-						color : 'limegreen',
+						color : 'red',
 						border : '2px solid yellow',
 						queue : false
 					}, 150);
@@ -30,14 +30,14 @@ $grade = $_GET['grade'];
 				$('.cylink').bind('mouseenter', function() {
 					$(this).transition({
 						backgroundColor : 'yellow',
-						color : 'limegreen',
+						color : 'red',
 						border : '2px solid yellow',
 						queue : false
 					}, 150);
 					$(this).bind('mouseout', function() {
 						$(this).transition({
 							backgroundColor : '',
-							color : 'white',
+							color : 'red',
 							border : '2px solid white',
 							queue : false
 						}, 150);
@@ -51,7 +51,7 @@ $grade = $_GET['grade'];
 	</head>
 	<body>
 
-		<a class="cylink" href="index.php">Back</a>
+		<a class="cylink" href="main.php">Back</a>
 		<br/>
 		<br/>
 
@@ -88,7 +88,7 @@ $grade = $_GET['grade'];
 					<option value="25" selected>25</option>
 				</select>
 			</div>
-			<span style="color: white; font-size: 30px; font-family: helvetica; top: -60px; position: relative;" >Problems </span>
+			<span style="color: red; font-size: 30px; font-family: helvetica; top: -40px; position: relative;" >Problems </span>
 			<br>
 			<input id="submitword" style="display: block; margin: 0 auto;" type="submit">
 		</form>
