@@ -1,8 +1,10 @@
 <?php
 $grade = $_POST["grade"];
 $value = unserialize($_POST['ArrayData']);
+$i = 0; 
 
 foreach($value as $val){
+$picture = $val[i]['picture'];
 echo <<<EOHTML
 <html>
 <head>
@@ -12,7 +14,7 @@ echo <<<EOHTML
 <body>
 <a class="cylink" href="main.php">Home</a><br/>
 <br/>
-<img id="image" border="0" src="$val['picture']"  width="304" height="228">
+<img id="image" border="0" src="$picture"  width="304" height="228">
 <br/>
 
 </body>
