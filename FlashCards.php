@@ -20,5 +20,6 @@ echo <<<EOHTML
 </body>
 </html>
 EOHTML;
+i++;
 }
 ?>
