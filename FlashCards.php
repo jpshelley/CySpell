@@ -5,6 +5,7 @@ $i = 0;
 
 foreach($value as $val){
 $picture = $val[i]['picture'];
+i++;
 echo <<<EOHTML
 <html>
 <head>
@@ -20,6 +21,6 @@ echo <<<EOHTML
 </body>
 </html>
 EOHTML;
-i++;
+
 }
 ?>
