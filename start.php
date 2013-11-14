@@ -50,7 +50,7 @@ $grade = $_GET['grade'];
 		</script>
 	</head>
 	<body>
-
+		<div id="break"/>
 		<a class="cylink" href="main.php">Back</a>
 		<br/>
 		<br/>
@@ -70,7 +70,7 @@ $grade = $_GET['grade'];
 					<option value="7">7</option>
 					<option value="8">8</option>
 					<option value="9">9</option>
-					<option value="10">10</option>
+					<option value="10" selected>10</option>
 					<option value="11">11</option>
 					<option value="12">12</option>
 					<option value="13">13</option>
@@ -85,10 +85,10 @@ $grade = $_GET['grade'];
 					<option value="22">22</option>
 					<option value="23">23</option>
 					<option value="24">24</option>
-					<option value="25" selected>25</option>
+					<option value="25">25</option>
 				</select>
 			</div>
-			<span style="color: red; font-size: 30px; font-family: helvetica; top: -40px; position: relative;" >Problems </span>
+			<div style="color: red; font-size: 30px; font-family: helvetica; top: -40px; position: relative;" >Problems </div>
 			<br>
 			<input id="submitword" style="display: block; margin: 0 auto;" type="submit">
 		</form>
