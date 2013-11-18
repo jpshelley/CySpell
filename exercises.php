@@ -1,6 +1,7 @@
 <?php 
 $problems = $_POST["problems"] - 1;
 $grade = $_POST["grade"];
+$arr = array();
 
 if($problems >= 0) {
 
@@ -16,7 +17,6 @@ catch(PDOException $e){
 // Get the Problems Table ()
 $results = $db->query("SELECT * FROM problems");
 
-$arr = array();
 $i = 0;
 $entry;
 $check1;
@@ -95,6 +95,27 @@ $(document).ready(function(){
 EOHTML;
 }
 else {
+	// Access DB
+	$e = "";
+	try{
+		$db = new PDO("sqlite:cyspell.db");
+	}
+	catch(PDOException $e){
+		$e->getMessage();
+	}
+
+	// Get the Problems Table ()
+	$results = $db->query("SELECT * FROM problems");
+
+	$i = 0;
+	// Add the grades question-answer to arr
+	foreach($results as $row){
+		$check1 = $row['grade'];
+		if($grade == $row['grade']){
+			$arr[$i] = array("picture" => $row['picture'], "answer" => $row['answer']);
+			$i++;
+		}	
+	}	
 echo <<<EOHTML
 <html>
 <head>
@@ -118,9 +139,14 @@ $(document).ready(function() {
 <body>
 <h1 class="maintitle"><img src="images/Cy-Spell-Logo.png"></h1>
 <a class="cylink" href="main.php">Home</a><br/><br/>
-<form action="FlashCards.php" method="post">
-	<input type="hidden" name="arr" value="$arr">
-	<input class="cylink" style="display: block; margin: 0 auto;" type="submit" value="Show FlashCards!">
+EOHTML;
+echo '
+<form action="FlashCards.php" method="post">';
+	foreach($arr as $val)
+	{
+		echo '<input type="hidden" name="arr[][picture]" value='; echo $val['picture']; echo '>';
+	}
+	echo '<input class="cylink" style="display: block; margin: 0 auto;" type="submit" value="Show FlashCards!">
 </form>
 
 
@@ -129,11 +155,6 @@ $(document).ready(function() {
 </p>
 
 </body>
-</html>
-
-EOHTML;
-
+</html>';
 }
-
-
 ?>
