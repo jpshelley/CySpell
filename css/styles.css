@@ -38,9 +38,9 @@ body
 }
 #spellhere
 {
-	border: 2px solid yellow;
+	border: 2px solid red;
 	border-radius: 4px;
-	background-color: red;
+	background-color: yellow;
 	line-height: 80px;
 	width: 450px;
 	text-align: center;
@@ -69,7 +69,8 @@ body
 }
 #image
 {
-	top: 0px;
+	top: 40px;
+	padding-right: 100px;
 	margin-left: 50px;
 	position: absolute;
 }

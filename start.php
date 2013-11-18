@@ -50,7 +50,7 @@ $grade = $_GET['grade'];
 		</script>
 	</head>
 	<body>
-		<div id="break"/>
+		<h1 class="maintitle"><img src="images/Cy-Spell-Logo.png"></h1>
 		<a class="cylink" href="main.php">Back</a>
 		<br/>
 		<br/>
@@ -90,7 +90,7 @@ $grade = $_GET['grade'];
 			</div>
 			<div style="color: red; font-size: 30px; font-family: helvetica; top: -40px; position: relative;" >Problems </div>
 			<br>
-			<input id="submitword" style="display: block; margin: 0 auto;" type="submit">
+			<input id="submitword" style="display: block; margin: 0 auto;" type="submit" value="Start Quiz!">
 		</form>
 
 	</body>

@@ -53,9 +53,9 @@ $(document).ready(function(){
 		return false;
 	});
 	$('#spellhere').bind('focus', function() {
-		$(this).transition({border: '2px dashed yellow', backgroundColor: 'red', queue: false},150);
+		$(this).transition({border: '2px dashed red', backgroundColor: ' yellow', queue: false},150);
 		$(this).bind('blur',function() {
-			$(this).transition({backgroundColor: 'red',border: '2px solid yellow', queue: false},150);
+			$(this).transition({backgroundColor: 'yellow',border: '2px solid red', queue: false},150);
 			$(this).unbind('blur');
 			return false;
 		});
@@ -80,7 +80,7 @@ $(document).ready(function(){
 <a class="cylink" href="main.php">Home</a><br/>
 <br/>
 <div class="exercisetext">$problems exercises left.</div>
-<img id="image" border="0" src="$picture"  width="304" height="228"><br/>
+<img src="$picture"  width="304" height="228"></img>
 <span class="exercisetext">What is this?</span>
 <form action="" method="post">
 	<input type="hidden" name="problems" value="$problems">
@@ -116,8 +116,8 @@ $(document).ready(function() {
 </script>
 </head>
 <body>
-
-<a class="cylink" href="main.php">Home</a><br/>
+<h1 class="maintitle"><img src="images/Cy-Spell-Logo.png"></h1>
+<a class="cylink" href="main.php">Home</a><br/> <br/>
 <a class="cylink" href="FlashCards.php">Show Flashcards</a><br/>
 <p>
 <div class="exercisetext" >Thank you for playing! :)</div>
