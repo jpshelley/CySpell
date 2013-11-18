@@ -3,8 +3,6 @@ $problems = $_POST["problems"] - 1;
 $grade = $_POST["grade"];
 $arr = array();
 
-if($problems >= 0) {
-
 // Access DB
 $e = "";
 try{
@@ -18,9 +16,6 @@ catch(PDOException $e){
 $results = $db->query("SELECT * FROM problems");
 
 $i = 0;
-$entry;
-$check1;
-$check2;
 // Add the grades question-answer to arr
 foreach($results as $row){
 	$check1 = $row['grade'];
@@ -30,8 +25,8 @@ foreach($results as $row){
 	}	
 }
 
+if($problems >= 0) {
 // Get a new picture and answer
-$entry = sizeof($arr);
 $id = rand(0, count($arr));
 $picture =  $arr[$id]['picture'];
 $answer =  $arr[$id]['answer'];
@@ -94,28 +89,7 @@ $(document).ready(function(){
 
 EOHTML;
 }
-else {
-	// Access DB
-	$e = "";
-	try{
-		$db = new PDO("sqlite:cyspell.db");
-	}
-	catch(PDOException $e){
-		$e->getMessage();
-	}
-
-	// Get the Problems Table ()
-	$results = $db->query("SELECT * FROM problems");
-
-	$i = 0;
-	// Add the grades question-answer to arr
-	foreach($results as $row){
-		$check1 = $row['grade'];
-		if($grade == $row['grade']){
-			$arr[$i] = array("picture" => $row['picture'], "answer" => $row['answer']);
-			$i++;
-		}	
-	}	
+else {	
 echo <<<EOHTML
 <html>
 <head>
