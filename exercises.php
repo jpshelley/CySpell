@@ -32,13 +32,10 @@ foreach($results as $row){
 }
 
 // Get a new picture and answer
-$j = 0;
 $entry = sizeof($arr);
 $id = rand(0, count($arr));
 $picture =  $arr[$id]['picture'];
 $answer =  $arr[$id]['answer'];
-$pass_arr[i]['picture'] = $picture;
-j++;
 echo <<<EOHTML
 <html>
 <head>
