@@ -17,7 +17,6 @@ catch(PDOException $e){
 $results = $db->query("SELECT * FROM problems");
 
 $arr = array();
-$pass_arr = array();
 $i = 0;
 $entry;
 $check1;
@@ -96,8 +95,6 @@ $(document).ready(function(){
 EOHTML;
 }
 else {
-$serialized =htmlspecialchars(serialize($pass_arr));
-echo "<input type=\"hidden\" name=\"ArrayData\" value=\"$serialized\"/>";
 echo <<<EOHTML
 <html>
 <head>
