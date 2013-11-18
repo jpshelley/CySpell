@@ -1,5 +1,5 @@
 <?php
-$arr = $_GET["arr"];
+$arr = $_POST["arr"];
 
 foreach($arr['picture'] as $array){
 $picture = $array;
