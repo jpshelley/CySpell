@@ -1,8 +1,8 @@
 <?php
 $grade = $_POST["arr"];
 
-foreach($arr as $array){
-$picture = $array['picture'];
+foreach($arr['picture'] as $array){
+$picture = $array;
 echo <<<EOHTML
 <html>
 <head>
