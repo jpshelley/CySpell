@@ -117,8 +117,13 @@ $(document).ready(function() {
 </head>
 <body>
 <h1 class="maintitle"><img src="images/Cy-Spell-Logo.png"></h1>
-<a class="cylink" href="main.php">Home</a><br/> <br/>
-<a class="cylink" href="FlashCards.php">Show Flashcards</a><br/>
+<a class="cylink" href="main.php">Home</a><br/><br/>
+<form action="FlashCards.php" method="post">
+	<input type="hidden" name="arr" value="$arr">
+	<input class="cylink" style="display: block; margin: 0 auto;" type="submit" value="Show FlashCards!">
+</form>
+
+
 <p>
 <div class="exercisetext" >Thank you for playing! :)</div>
 </p>
