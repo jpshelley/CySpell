@@ -1,6 +1,6 @@
 <?php 
 $problems = $_POST["problems"] - 1;
-$grade = $_GET["grade"];
+$grade = $_POST["grade"];
 
 if($problems >= 0) {
 
