@@ -1,5 +1,5 @@
 <?php
-$grade = $_GET["arr"];
+$arr = $_GET["arr"];
 
 foreach($arr['picture'] as $array){
 $picture = $array;
