@@ -2,6 +2,8 @@ body
 {
 	background-color: #FF0;
 	text-align: center;
+	padding: 2em;
+	
 }
 
 #gradelist
@@ -115,4 +117,11 @@ margin-top: 50px;
 #break
 {
 	margin-top:250px;
+}
+
+#welcome
+{
+	color: #73797E;
+	padding-bottom: 50px;
+	font: 32px arial, sans-serif; 
 }

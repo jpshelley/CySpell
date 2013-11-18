@@ -4,6 +4,8 @@ require_once 'sdk/facebook.php';
 
 $config = array('appId' => '249696895179837', 'secret' => '446a84044156109ba1f39d09954c73b9');
 $facebook = new Facebook($config);
+$uid = $facebook->getUser();
+$user_profile = $facebook->api('/me','GET');
 ?>
 <html>
 	<head>
@@ -39,6 +41,8 @@ $facebook = new Facebook($config);
 	<body>
 		<div id="fb-root"></div>
 
+					
+
 		<!--
 		Below we include the Login Button social plugin. This button uses the JavaScript SDK to
 		present a graphical Login button that triggers the FB.login() function when clicked.
@@ -47,7 +51,7 @@ $facebook = new Facebook($config);
 		/docs/reference/plugins/login/ -->
 
 		<h1 class="maintitle"><img src="images/Cy-Spell-Logo.png"></h1>
-
+<div id="welcome"> <?php echo "Welcome " . $user_profile['name'] . "!";?></div>
 		<ul id="gradelist">
 			<li>
 				<a href="start.php?grade=k"><img src="images/kindergarten.png"></a>
